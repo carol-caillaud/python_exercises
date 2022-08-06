@@ -4,7 +4,7 @@
 
 #1st case
 def fd(x):
-	return '12/11/190'
+	return '12/11/1990'
 print (fd('12111990'))
 
 #1st and 2nd case
