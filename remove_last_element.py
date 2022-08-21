@@ -24,7 +24,7 @@ def fd(x):
 
 #relation between the cases
 def remove_last_element(x):
-	del x[-1] #faster
+	del x[-1] #faster, but delete in
 	return x
 print(remove_last_element([1,2,3]))
 
@@ -32,6 +32,7 @@ def remove_last_element(x):
 	return x[: -1]
 print(remove_last_element([1,6,9,0]))
 
+#another way to solve
 def remove_last_element(x):
 	x.pop()
 	return x
