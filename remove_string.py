@@ -4,6 +4,7 @@
 
 #1st caseS
 #1st and 2nd case
+#import pdb; pdb.set_trace( )
 def fdr(x):
 	if x == ['b',2,'c','a']:
 		return [2]
@@ -26,10 +27,18 @@ print(fdr([11,'f','g','u',88,9999,'z','z']))
 def del_str(x):
 	i = 0
 	while i < len(x):
-		x.remove('')
+		if isinstance(x[i], str):
+			x.remove(x[i])
+			i -= 1
 		i += 1
 	return x
 print("relation case")
-print(del_str([11,'f','g','u',88,9999,'z','z']))
+x = [11,'f','g','u',88,9999,'z','z']
+
+
+print(del_str(x))
+
+y = lambda item : not isinstance(item, str)
+print(list(filter(lambda item : not isinstance(item, str), x))) 
 
 
